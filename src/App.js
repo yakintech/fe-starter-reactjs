@@ -1,13 +1,12 @@
-import JsxArraySample from "./jsxSample/JsxArraySample"
-import JsxIfElse from "./jsxSample/JsxIfElse"
-import ObjectArraySample from "./jsxSample/ObjectArraySample"
-import ObjectSample from "./jsxSample/ObjectSample"
+import StateColorSample5 from "./state/StateColorSample5"
+import StateSample3 from "./state/StateSample3"
+import StateSample4 from "./state/StateSample4"
 
 
 function App() {
 
   return (<>
-    <ObjectArraySample/>
+    <StateColorSample5/>
 
   </>)
 
