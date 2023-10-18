@@ -6,6 +6,7 @@ import NotFound from "./pages/NotFound"
 import EffectSample from "./effectSample/EffectSample"
 import EffectSample2 from "./effectSample/EffectSample2"
 import CustomerPage from "./pages/CustomerPage"
+import OrderPage from "./pages/OrderPage"
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
             <li><Link to='/about'>About</Link></li>
             <li><Link to='/contact'>Contact</Link></li>
             <li><Link to='/customers'>Customers</Link></li>
+            <li><Link to='/orders'>Orders</Link></li>
           </ul>
 
           <Routes>
@@ -24,6 +26,8 @@ function App() {
             <Route path="/about" element={<AboutPage/>}/>
             <Route path="/contact" element={<ContactPage/>}/>
             <Route path="/customers" element={<CustomerPage/>} />
+            <Route path="/orders" element={<OrderPage/>} />
+
             <Route path="*" element={<NotFound/>} />
           </Routes>
 
