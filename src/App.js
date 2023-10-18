@@ -3,9 +3,11 @@ import HomePage from "./pages/HomePage"
 import AboutPage from "./pages/AboutPage"
 import ContactPage from "./pages/ContactPage"
 import NotFound from "./pages/NotFound"
+import EffectSample from "./effectSample/EffectSample"
+import EffectSample2 from "./effectSample/EffectSample2"
+import CustomerPage from "./pages/CustomerPage"
 
 function App() {
-
 
 
   return (<>
@@ -14,12 +16,14 @@ function App() {
             <li><Link to='/'>Home</Link></li>
             <li><Link to='/about'>About</Link></li>
             <li><Link to='/contact'>Contact</Link></li>
+            <li><Link to='/customers'>Customers</Link></li>
           </ul>
 
           <Routes>
             <Route path="/" element={<HomePage/>}/>
             <Route path="/about" element={<AboutPage/>}/>
             <Route path="/contact" element={<ContactPage/>}/>
+            <Route path="/customers" element={<CustomerPage/>} />
             <Route path="*" element={<NotFound/>} />
           </Routes>
 
