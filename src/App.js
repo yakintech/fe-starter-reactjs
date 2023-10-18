@@ -1,16 +1,29 @@
-import ProductDetail from "./props/ProductDetail"
-import StudentDetail from "./props/StudentDetail"
-import UserDetail from "./props/UserDetail"
-
+import { Link, Route, Routes } from "react-router-dom"
+import HomePage from "./pages/HomePage"
+import AboutPage from "./pages/AboutPage"
+import ContactPage from "./pages/ContactPage"
+import NotFound from "./pages/NotFound"
 
 function App() {
 
-  const hello = () => {
-    alert("Hello Reactjs!")
-  }
+
 
   return (<>
-    <StudentDetail hello={hello} name='Ali' email='ali@mail.com' city='Ankara' />
+
+          <ul style={{display:'flex', justifyContent:'space-between'}}>
+            <li><Link to='/'>Home</Link></li>
+            <li><Link to='/about'>About</Link></li>
+            <li><Link to='/contact'>Contact</Link></li>
+          </ul>
+
+          <Routes>
+            <Route path="/" element={<HomePage/>}/>
+            <Route path="/about" element={<AboutPage/>}/>
+            <Route path="/contact" element={<ContactPage/>}/>
+            <Route path="*" element={<NotFound/>} />
+          </Routes>
+
+        <p>Site Footer</p>
   </>)
 
 }
