@@ -1,14 +1,16 @@
-import StateColorSample5 from "./state/StateColorSample5"
-import StateSample3 from "./state/StateSample3"
-import StateSample4 from "./state/StateSample4"
-import StateSample5 from "./state/StateSample5"
+import ProductDetail from "./props/ProductDetail"
+import StudentDetail from "./props/StudentDetail"
+import UserDetail from "./props/UserDetail"
 
 
 function App() {
 
-  return (<>
-    <StateSample5/>
+  const hello = () => {
+    alert("Hello Reactjs!")
+  }
 
+  return (<>
+    <StudentDetail hello={hello} name='Ali' email='ali@mail.com' city='Ankara' />
   </>)
 
 }
