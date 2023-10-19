@@ -7,9 +7,13 @@ import EffectSample from "./effectSample/EffectSample"
 import EffectSample2 from "./effectSample/EffectSample2"
 import CustomerPage from "./pages/CustomerPage"
 import OrderPage from "./pages/OrderPage"
+import AddCategory from "./formSample/AddCategory"
+import AddSupplier from "./formSample/AddSupplier"
 
 function App() {
 
+  // return <AddCategory/>
+  return <AddSupplier/>
 
   return (<>
 
