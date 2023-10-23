@@ -9,33 +9,45 @@ import CustomerPage from "./pages/CustomerPage"
 import OrderPage from "./pages/OrderPage"
 import AddCategory from "./formSample/AddCategory"
 import AddSupplier from "./formSample/AddSupplier"
+import ProductsPage from "./pages/ProductsPage"
+import Favorites from "./pages/Favorites"
+import { useContext } from "react"
+import { FavoritesContext } from "./context/FavoritesContext"
 
 function App() {
 
   // return <AddCategory/>
-  return <AddSupplier/>
+  // return <AddSupplier/>
+
+  const { favorites } = useContext(FavoritesContext)
 
   return (<>
 
-          <ul style={{display:'flex', justifyContent:'space-between'}}>
-            <li><Link to='/'>Home</Link></li>
-            <li><Link to='/about'>About</Link></li>
-            <li><Link to='/contact'>Contact</Link></li>
-            <li><Link to='/customers'>Customers</Link></li>
-            <li><Link to='/orders'>Orders</Link></li>
-          </ul>
+    <ul style={{ display: 'flex', justifyContent: 'space-between' }}>
+      <li><Link to='/'>Home</Link></li>
+      <li><Link to='/about'>About</Link></li>
+      <li><Link to='/contact'>Contact</Link></li>
+      <li><Link to='/customers'>Customers</Link></li>
+      <li><Link to='/orders'>Orders</Link></li>
+      <li><Link to='/products'>Products</Link></li>
+      <li><Link to='/favorites'>Favorites <span style={{color:'red'}}>({favorites.length})</span></Link></li>
 
-          <Routes>
-            <Route path="/" element={<HomePage/>}/>
-            <Route path="/about" element={<AboutPage/>}/>
-            <Route path="/contact" element={<ContactPage/>}/>
-            <Route path="/customers" element={<CustomerPage/>} />
-            <Route path="/orders" element={<OrderPage/>} />
+    </ul>
 
-            <Route path="*" element={<NotFound/>} />
-          </Routes>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/about" element={<AboutPage />} />
+      <Route path="/contact" element={<ContactPage />} />
+      <Route path="/customers" element={<CustomerPage />} />
+      <Route path="/orders" element={<OrderPage />} />
+      <Route path="/products" element={<ProductsPage />} />
+      <Route path="/favorites" element={<Favorites />} />
 
-        <p>Site Footer</p>
+
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+
+    <p>Site Footer</p>
   </>)
 
 }
