@@ -15,11 +15,16 @@ import { useContext } from "react"
 import { FavoritesContext } from "./context/FavoritesContext"
 import AddProduct from "./mui/AddProduct"
 import ProductsDataGrid from "./mui/ProductsDataGrid"
+import Guard from "./children/Guard"
+import ChildComp from "./children/ChildComp"
+import Parent from "./memorize/Parent"
+import RefSample from "./ref/RefSample"
 
 function App() {
 
-  // return <AddCategory/>
-  // return <AddSupplier/>
+
+  return <RefSample/>
+
 
   const { favorites } = useContext(FavoritesContext)
 
@@ -32,11 +37,11 @@ function App() {
       <li><Link to='/customers'>Customers</Link></li>
       <li><Link to='/orders'>Orders</Link></li>
       <li><Link to='/products'>Products</Link></li>
-      <li><Link to='/favorites'>Favorites <span style={{color:'red'}}>({favorites.length})</span></Link></li>
+      <li><Link to='/favorites'>Favorites <span style={{ color: 'red' }}>({favorites.length})</span></Link></li>
       <li><Link to='/addproduct'>Add Product</Link></li>
       <li><Link to='/productsdatagrid'>Products Grid</Link></li>
-    
-      
+
+
 
     </ul>
 
@@ -48,8 +53,8 @@ function App() {
       <Route path="/orders" element={<OrderPage />} />
       <Route path="/products" element={<ProductsPage />} />
       <Route path="/favorites" element={<Favorites />} />
-      <Route path="/addproduct" element={<AddProduct/>} />
-      <Route path="/productsdatagrid" element={<ProductsDataGrid/>} />
+      <Route path="/addproduct" element={<AddProduct />} />
+      <Route path="/productsdatagrid" element={<ProductsDataGrid />} />
 
       <Route path="*" element={<NotFound />} />
     </Routes>
