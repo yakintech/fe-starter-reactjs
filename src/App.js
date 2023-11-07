@@ -23,8 +23,6 @@ import RefSample from "./ref/RefSample"
 function App() {
 
 
-  return <RefSample/>
-
 
   const { favorites } = useContext(FavoritesContext)
 
